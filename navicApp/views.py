@@ -8,6 +8,6 @@ from navicApp import dataServe
 
 @csrf_exempt
 def getData(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         data = dataServe.getdata()
         return render(request, 'index.html',{"r":data})
